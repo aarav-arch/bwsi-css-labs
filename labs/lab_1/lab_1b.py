@@ -33,9 +33,10 @@ def simple_calculator(operation: str, num1: float, num2: float) -> float:
         if num2 != 0:
             return num1 / num2
         else:
-            raise ValueError("Cannot divide by zero.")
+            print("you tryna make dark matter or something? divide by zero = kaboom.")
     else:
-        raise ValueError("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'.")
+        print("my god... it's a FREAKING CALCULATOR. just pick from add subtract multiply or divide. I'm not chatgpt, now am i?")
+
 
 def sand_hantizer(prompt: str) -> float:
     while True:
@@ -55,9 +56,11 @@ def main():
     operation = input("Enter the operation (add, subtract, multiply, divide): ").strip().lower()
 
     # Perform the calculation and display the result
-    result = simple_calculator(operation, num1, num2)
+    while True:
+        result = simple_calculator(operation, num1, num2)
+        if result is not None:
+            break
     print(f"The result of {operation}ing {num1} and {num2} is: {result}")
-
-
+    
 if __name__ == "__main__":
     main()
